@@ -16,6 +16,7 @@ setup(
         "pywin32",
         "pillow",
         "toml",
+        "screeninfo",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
