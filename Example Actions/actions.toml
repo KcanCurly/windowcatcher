@@ -3,4 +3,4 @@ name = "Example"
 command = """
 cat example.txt
 """
-output = "example"
+output = "example.png"
