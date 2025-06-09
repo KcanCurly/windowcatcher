@@ -124,8 +124,8 @@ def main():
     parser = argparse.ArgumentParser(description="Type into a window by PID using pyautogui.")
     parser.add_argument("pid", type=int, help="PID of the target window's process")
     parser.add_argument("title", type=str, help="Terminal Title")
-    parser.add_argument("toml-file", type=str, help="Path to the TOML configuration file.")
-    parser.add_argument("output-directory", type=str, help="Path to the directory that images will be saved.")
+    parser.add_argument("toml_file", type=str, help="Path to the TOML configuration file.")
+    parser.add_argument("output_directory", type=str, help="Path to the directory that images will be saved.")
 
 
     args = parser.parse_args()
