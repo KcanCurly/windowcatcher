@@ -7,6 +7,7 @@ import pygetwindow
 from PIL import Image
 import screeninfo
 import toml
+import pyperclip
 
 def find_last_non_black_column(image_path):
     image = Image.open(image_path).convert("L")  # Grayscale
@@ -97,7 +98,8 @@ def save_pic(path, title):
     im.save(path)
 
 def type_to_screen(message):
-    pyautogui.typewrite(message)
+    pyperclip.copy(message)
+    pyautogui.hotkey("ctrl", "v")
     pyautogui.press('enter')
 
 # Load and process TOML config
@@ -114,7 +116,6 @@ def process_elements(pid, config_path, title, output_directory):
         output = action.get("output")
 
         try:
-            print(f"Typing: {command}")
             type_to_screen(command)
             save_pic(f"{output_directory}/{output}", title)
 
