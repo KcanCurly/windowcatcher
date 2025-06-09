@@ -1,0 +1,6 @@
+[[actions]]
+name = "Example"
+command = """
+cat example.txt
+"""
+output = "example"
