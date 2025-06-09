@@ -114,6 +114,7 @@ def process_elements(pid, config_path, title, output_directory):
         output = action.get("output")
 
         try:
+            print(f"Typing: {command}")
             type_to_screen(command)
             save_pic(f"{output_directory}/{output}", title)
 
