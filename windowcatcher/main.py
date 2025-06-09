@@ -22,10 +22,8 @@ def find_last_non_black_column(image_path):
                 all_black = False
                 break
         if not all_black:
-            print(f"Last non-black row (from right left) is at x = {x}")
             return x
 
-    print("Image is completely black.")
     return -1
 
 def find_last_non_black_row(image_path):
@@ -41,10 +39,7 @@ def find_last_non_black_row(image_path):
                 all_black = False
                 break
         if not all_black:
-            print(f"Last non-black row (from bottom up) is at y = {y}")
             return y
-
-    print("Image is completely black.")
     return -1
 
 def find_window_by_pid(pid):
@@ -98,7 +93,7 @@ def save_pic(path, title):
     im.save(path)
 
 def type_to_screen(message):
-    pyperclip.copy(message)
+    pyperclip.copy(message) # We do it like this instead of typing with pyautogui because special characters like | doesn't work.
     pyautogui.hotkey("ctrl", "v")
     pyautogui.press('enter')
 
